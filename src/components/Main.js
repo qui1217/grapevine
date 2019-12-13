@@ -5,26 +5,21 @@
 import React from 'react'
 
 // components
-import Header from './components/Header.js'
-import Aside from './components/Aside.js'
-import Main from './components/Main.js'
+import Post from './Post.js'
+import Form from './Form.js'
 
 // =============================
 // COMPONENT CLASS
 // =============================
-class App extends React.Component {
+class Main extends React.Component {
   // ==============
   // RENDER
   // ==============
   render () {
     return (
-      <div className="large-container">
-        <Header/>
-        <div className="main-container">
-          <Aside />
-          <Main />
-        </div>
-      </div>
+      <main>
+        <Post/>
+      </main>
     )
   }
 }
@@ -32,4 +27,4 @@ class App extends React.Component {
 // =============================
 // EXPORT
 // =============================
-export default App
+export default Main
