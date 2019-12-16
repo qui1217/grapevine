@@ -32,7 +32,21 @@ class Form extends React.Component {
   // handles submit
   handleSubmit = (e) => {
     e.preventDefault()
-    console.log('submitted!')
+    if (this.props.view.page === 'addPost') {
+      this.props.handleCreate(this.state)
+    } else if (this.props.view.page === 'editPost') {
+      this.props.handleUpdate(this.state)
+    }
+
+  }
+
+  componentDidMount(){
+    this.setState({
+      name: this.props.formInputs.name,
+      image: this.props.formInputs.image,
+      body: this.props.formInputs.body,
+      id: this.props.formInputs.id
+    })
   }
 
   // ==============
